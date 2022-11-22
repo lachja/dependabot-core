@@ -73,7 +73,7 @@ module Dependabot
       end
 
       def branch(repo, branch_name)
-        branch_path = "#{repo}/refs/branches/#{branch_name}"
+        branch_path = "#{repo}/branches/#{branch_name}"
         response = get(base_url + branch_path)
 
         JSON.parse(response.body)
